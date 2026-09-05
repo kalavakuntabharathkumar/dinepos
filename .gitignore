@@ -1,0 +1,27 @@
+# Secrets - NEVER commit these
+.env
+.env.local
+.env.*.local
+
+# Dependencies
+node_modules/
+
+# Next.js build output
+.next/
+out/
+next-env.d.ts
+
+# Expo / React Native
+.expo/
+mobile/node_modules/
+dist/
+web-build/
+
+# Logs and OS junk
+*.log
+npm-debug.log*
+.DS_Store
+Thumbs.db
+
+# TypeScript cache
+*.tsbuildinfo
