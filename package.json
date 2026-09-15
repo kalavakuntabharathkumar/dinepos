@@ -1,0 +1,30 @@
+{
+  "name": "dinepos",
+  "private": true,
+  "engines": { "node": ">=20.6" },
+  "scripts": {
+    "dev:server": "tsx watch server/index.ts",
+    "seed": "tsx server/seed.ts",
+    "dev:web": "node --env-file=.env node_modules/next/dist/bin/next dev web",
+    "build:web": "node --env-file=.env node_modules/next/dist/bin/next build web",
+    "dev:mobile": "cd mobile && node --env-file=../.env node_modules/expo/bin/cli start"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.45.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "next": "^14.2.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.14.0",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "tsx": "^4.16.0",
+    "typescript": "^5.5.0"
+  }
+}

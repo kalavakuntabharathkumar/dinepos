@@ -1,0 +1,11 @@
+{
+  "expo": {
+    "name": "DinePOS",
+    "slug": "dinepos",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "ios": { "supportsTablet": true, "bundleIdentifier": "com.dinepos.app" },
+    "android": { "package": "com.dinepos.app" }
+  }
+}
