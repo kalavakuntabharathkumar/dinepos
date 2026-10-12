@@ -159,16 +159,16 @@ A walk-in customer follows the same path, except the cashier enters the order on
 
 **server/seed.ts** - Fills the database with demo data so the app is not empty.
 - `user()` - creates a login (admin, staff or customer) and sets its role
-- `main()` - creates 2 staff logins, 10 customers, 12 menu items and about 220 orders with payments and points. It skips itself if data already exists
+- `main()` - creates 1 admin login, 1 staff login, 10 customers, 12 menu items and 220 orders with payments and points. It skips itself if 200 or more orders already exist
 
 **web/app/layout.tsx** - The outer frame of the website (page title and the basic HTML shell). Function: `RootLayout()`.
 
 **web/app/page.tsx** - The whole website (staff and admin only).
-- `api()` - sends requests to the backend with the login pass. `useOrders()` - loads orders and refreshes them live. `customers()` - loads the customer list
+- `api()` - sends requests to the backend with the login pass. `useOrders()` - loads the latest 60 orders and refreshes them live. `customers()` - loads the customer list
 - `Login()` - sign in box
 - `POS()` - build a walk-in order, pick a customer, use points, choose cash/card/UPI, place order
 - `Kitchen()` - active orders with a button to move them to the next status
-- `Orders()` - table of all orders with Mark paid, Cancel and Refund buttons
+- `Orders()` - table of the latest 60 orders with Mark paid, Cancel and Refund buttons
 - `Loyalty()` - customers, their points, purchase history and points history
 - `Menu()` - add items, change price, hide/show, delete (admin only)
 - `Reports()` - orders, revenue, customers, orders by status (admin only)
